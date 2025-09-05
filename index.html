@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ryan Hutchinson</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Ryan Hutchinson</h1>
+    <p>Undergraduate Computer Science Student.<br>Aspiring Software Developer.</p>
+    <a href="#projects" class="hero-btn">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p class="spaced">
+      write this please.
+    </p>
+    
+    <spacer type="block" width="50" />
+    
+    <h3>Fun Fact</h3>
+    <p>
+      This whole website is hosted on an old, repurposed Lenovo ThinkPad.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Project 1</h3>
+        <p>Body</p>
+      </div>
+      <div class="card">
+        <h3>Project 2</h3>
+        <p>Body</p>
+      </div>
+      <div class="card">
+        <h3>Project 3</h3>
+        <p>Body</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="https://formspree.io/f/mgvlpjgd" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Ryan Hutchinson</p>
+  </footer>
+</body>
+</html>
+

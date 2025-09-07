@@ -34,7 +34,7 @@ modal.onclick = function(e) {
 };
 
 // --- Fade-in on scroll ---
-const faders = document.querySelectorAll('.fade');
+const faders = document.querySelectorAll('.fade, .fade-delayed');
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
   if (entry.isIntersecting) {

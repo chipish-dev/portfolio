@@ -56,6 +56,18 @@ li {
   font-weight: bold;
 }
 
+.fade-delayed {
+  opacity: 0;
+  transform: translateY(120px); /* subtle slide-up effect */
+  transition: opacity 1.5s cubic-bezier(0, 0, 0.1, 1.0), transform 1s cubic-bezier(0, 0, 0.1, 1.0);
+  transition-delay: 2.25s;
+}
+
+.fade-delayed.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .fade {
   opacity: 0;
   transform: translateY(120px); /* subtle slide-up effect */
@@ -65,7 +77,6 @@ li {
 .fade.visible {
   opacity: 1;
   transform: translateY(0);
-  
 }
 
 .typewriter {
@@ -95,6 +106,84 @@ li {
     border-color: white;
   }
 }
+
+.animated-header {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: transparent;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+   user-select: none;       
+  animation: revealText 2s forwards; /* animation to show text */
+}
+
+.animated-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;          /* line thickness */
+  height: 0;           /* initial height */
+  background: white;
+  animation: lineAnimation 2s forwards;
+}
+
+@keyframes lineAnimation {
+  0% {
+    height: 0;
+    top: 0;
+    left: 0;
+    width: 5px;
+  }
+  30% {
+    height: 100%;       /* grow vertically */
+    left: 0;
+    top: 0;
+    width: 5px;
+  }
+  60% {
+    height: 100%;
+    top: 0;
+    left: 0;         /* move horizontally */
+    width: 100%;
+  }
+  80% {
+    width: 5px;        /* stretch across if you want */
+    top: 0;
+    height: 100%;        /* shrink down */
+    left: calc(100% - 5px);
+  }
+  100% {
+    width: 5px;
+    height: 0;        /* disappear completely if desired */
+    top: 100%;
+    left: calc(100% - 5px);
+  }
+}
+
+@keyframes revealText {
+  0%, 59% {
+    color: transparent;         /* hidden until 80% mark */
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+     user-select: none;    
+  }
+  60%, 100% {
+    color: white;         /* show text after 80% */
+    -webkit-user-select: text;  /* Chrome all / Safari all */
+    -moz-user-select: text;     /* Firefox all */
+    -ms-user-select: text;      /* IE 10+ */
+    user-select: text;       
+  }
+}
+
 
 .hero-item {
   display: inline-flex;            /* keep icon + text aligned */

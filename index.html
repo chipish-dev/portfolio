@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Ryan Hutchinson</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <!-- Navigation -->
   <header>
     <nav class="navbar">
-      <div class="logo">Ryan Hutchinson</div>
+      <div class="logo disable-caret">Portfolio</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#stack">My Stack</li>
+        <li><a href="#stack">My Stack</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -21,47 +21,54 @@
   </header>
 
   <!-- Hero Section -->
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Ryan Hutchinson</h1>
-    <p>Undergraduate Computer Science Student.<br>Aspiring Software Developer.</p>
-    <a href="#projects" class="hero-btn">View My Work</a>
+    <div class="fade">
+      <h1 class="typewriter">Ryan Hutchinson</h1>
+      <p>Undergraduate Computer Science Student.<br>Aspiring Software Engineer.</p>
+      <a href="#projects" class="hero-btn light-spaced">View My Work</a>
+      <br>
+      <ul>
+        <li class="hero-item"><a href="https://github.com/chipish-dev" target="_blank"><img class="large-icon" src="images/github.webp"></a></li>
+        <li class="hero-item"><a href="https://www.linkedin.com/in/ryan-hutchinson-641391325/" target="_blank"><img class="large-icon" src="images/linkedin.webp"></a></li>
+      </ul>
+    </div>
+    <div class="spotlight-overlay" aria-hidden="true"></div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="section">
-    <h1>About Me<span class="text-theme">.</span></h1>
-    <p class="spaced">
+    <h1 class="very-light-spaced fade">About Me<span class="text-theme">.</span></h1>
+    <p class="spaced fade">
       write this please.
     </p>
     
-    <spacer type="block" width="50" />
-    
-    <h2>Fun Fact<span class="text-theme">.</span></h2>
-    <p>
+    <h2 class="fade">Fun Fact<span class="text-theme">.</span></h2>
+    <p class="fade">
       This website is self-hosted on an old, repurposed Lenovo ThinkPad.
     </p>
   </section>
   
   <!-- Stack Section -->
   <section id="stack" class="section">
-    <h1 class="light-spaced">My Stack<span class="text-theme">.</span></h1>
-    <h2><u>Frontend</u></h2>
-    <ul class="light-spaced">
-      <li><img class="icon" src="images/html.png">HTML</li>
-      <li><img class="icon" src="images/css.png">CSS</li>
+    <h1 class="light-spaced fade">My Stack<span class="text-theme">.</span></h1>
+    <ul class="light-spaced fade">
+      <li class="stack-item"><img class="icon" src="images/html.png">HTML</li>
+      <li class="stack-item"><img class="icon" src="images/css.png">CSS</li>
+      <li class="stack-item"><img class="icon" src="images/qt.png">QT</li>
     </ul>
-    <h2><u>Backend</u></h2>
-    <ul>
-      <li><img class="icon" src="images/python.png">Python</li>
-      <li><img class="icon" src="images/c.png">C</li>
-      <li><img class="icon" src="images/lua.png">Lua</li>
+    <br>
+    <ul class="light-spaced fade">
+      <li class="stack-item"><img class="icon" src="images/python.png">Python</li>
+      <li class="stack-item"><img class="icon" src="images/c.png">C</li>
+      <li class="stack-item"><img class="icon" src="images/lua.png">Lua</li>
     </ul>
   </section>
   
   <!-- Projects Section -->
   <section id="projects" class="section">
-    <h1>Projects<span class="text-theme">.</span></h1>
-    <div class="projects-grid">
+    <h1 class="fade">Projects<span class="text-theme">.</span></h1>
+    <div class="projects-grid fade">
       <div class="card">
         <h3>Productivity App</h3>
         <p class="light-spaced">
@@ -69,7 +76,8 @@
           
           Features both a to-do list and a pomodoro timer for increased productivity.
         </p>
-        <img src="images/pomodoro.jpg">
+        <img class="project-image light-spaced" src="images/pomodoro.jpg">
+        <a class="link-button" href="https://github.com/chipish-dev/Productivity-App" target="_blank">Github</a>
       </div>
       <div class="card">
         <h3>Project 2</h3>
@@ -83,8 +91,8 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
+  <section id="contact" class="section fade very-spaced">
+    <h2 class="light-spaced">Contact Me<span class="text-theme">.</span></h2>
     <form class="contact-form" action="https://formspree.io/f/mgvlpjgd" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
@@ -97,6 +105,13 @@
   <footer>
     <p>&copy; 2025 Ryan Hutchinson</p>
   </footer>
+
+<div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>
 
